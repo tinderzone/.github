@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  automate_invite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite on label
+        uses: vj-abigo/invite-on-label@v1.3
+        with:
+          organization: tinderzone
+          label: welcome 🎉🎉🎉
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          comment: "<b>Invitation sent to join tinderzone. Welcome to the community 🎉🎉🎉</b>"
+        env:
+          INVITE_TOKEN: ${{ secrets.INVITE_TOKEN }}
