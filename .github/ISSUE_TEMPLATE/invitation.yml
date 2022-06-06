@@ -1,0 +1,12 @@
+name: Invitation to join tinderzone
+description: I would like to be part of this awesome community
+title: "Please invite me to tinderzone"
+labels: [welcome 🎉🎉🎉]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Insert your name here
+    validations:
+      required: true
